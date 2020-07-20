@@ -1,0 +1,14 @@
+{
+  "name": "kelly-site",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "@gridsome/vue-remark": "^0.1.9",
+    "gridsome-plugin-remark-shiki": "^0.3.1"
+  }
+}
