@@ -6,7 +6,7 @@ module.exports = {
       options: {
         typeName: 'Post',
         baseDir: './content/posts',
-        pathPrefix: '/post',
+        pathPrefix: '/blog',
         template: './src/templates/Post.vue',
         plugins: [
           [
@@ -17,4 +17,4 @@ module.exports = {
       },
     },
   ],
-}
+};

@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <slot/>
+    <slot />
   </div>
 </template>
 
@@ -14,10 +14,12 @@ query {
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
+  background: #f5f8fa;
 }
 
 .layout {
