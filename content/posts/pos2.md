@@ -1,6 +1,6 @@
 ---
-title: First Blog Post
-description: First Blog Post - Gridsome Forestry
+title: Second Blog Post
+description: Second Blog Post - Gridsome Forestry
 date: 2019-05-12
 tags: ['node', 'testing']
 ---
