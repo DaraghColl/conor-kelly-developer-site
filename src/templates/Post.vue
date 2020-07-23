@@ -1,7 +1,15 @@
 <template>
   <Layout>
-    <div class="project__header">
-      <h1 class="project__title">{{ $page.post.title }}</h1>
+    <div class="post">
+      <h1 class="post__title">{{ $page.post.title }}</h1>
+      <div>
+        <g-link class="post__link" to="/blog/">
+          <g-image
+            class="post__link-icon"
+            src="/assets/arrow-left-blue.svg"
+          />All Posts
+        </g-link>
+      </div>
     </div>
 
     <div class="project__content">
@@ -24,4 +32,28 @@ query Post ($path: String!) {
 export default {};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .post__link {
+    color: #0099cc;
+    padding: 0.4em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .post__link-icon {
+      width: 30px;
+    }
+  }
+}
+</style>
