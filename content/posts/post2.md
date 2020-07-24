@@ -1,8 +1,8 @@
 ---
-title: First Blog Post
-description: Angular - Behhavior Subject and Observables
+title: Second Blog Post
+description: Second Blog Post - Gridsome Forestry
 date: 2019-05-12
-tags: ['angular', 'frontend']
+tags: ['vuejs', 'frontend']
 ---
 
 # An h1 header

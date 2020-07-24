@@ -5,10 +5,17 @@
     <h3 class="card__description">{{ post.description }}</h3>
     <div class="card__footer">
       <div class="card__tags-wrapper">
-        <button class="card__tag" v-for="tag in post.tags" :key="tag">
-          <g-image class="card__tag-icon" src="/assets/tag.svg" />
-          {{ tag }}
-        </button>
+        <g-link
+          class="card__tag"
+          v-for="tag in post.tags"
+          :key="tag.id"
+          :to="tag.path"
+        >
+          <div class="card__tag-flex">
+            <g-image class="card__tag-icon" src="/assets/tag.svg" />
+            {{ tag.title }}
+          </div>
+        </g-link>
       </div>
       <div>
         <g-link class="card__link" :to="post.path">Read More</g-link>
@@ -74,14 +81,13 @@ export default {
     .card__tag {
       background-color: #f5f8fa;
       border: 1px solid #f5f8fa;
+      text-decoration: none;
+      color: #000;
       padding: 0.5em;
       border-radius: 5px;
       margin-right: 5px;
       min-width: 100px;
       font-weight: bold;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
       transition: 0.4s;
 
       &:hover {
@@ -91,9 +97,16 @@ export default {
         transition: 0.4s;
       }
 
+      .card__tag-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .card__tag-icon {
         width: 15px;
         transform: rotate(-110deg);
+        margin-right: 0.5em;
       }
     }
   }

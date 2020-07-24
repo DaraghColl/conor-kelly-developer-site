@@ -8,6 +8,13 @@ module.exports = {
         baseDir: './content/posts',
         pathPrefix: '/blog',
         template: './src/templates/Post.vue',
+        refs: {
+          // Example 2: Create a Tag collection by reference `tags` field.
+          tags: {
+            typeName: 'Tag',
+            create: true,
+          },
+        },
         plugins: [
           [
             'gridsome-plugin-remark-shiki',
@@ -17,4 +24,8 @@ module.exports = {
       },
     },
   ],
+
+  templates: {
+    Tag: '/tag/:id',
+  },
 };

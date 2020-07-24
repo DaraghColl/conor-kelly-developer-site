@@ -1,6 +1,6 @@
 ---
-title: Second Blog Post
-description: Second Blog Post - Gridsome Forestry
+title: Third Blog Post
+description: Node Js Formatting with Prettier and Husky
 date: 2019-05-12
 tags: ['node', 'testing']
 ---

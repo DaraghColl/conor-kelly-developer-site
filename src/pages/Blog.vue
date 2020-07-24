@@ -30,7 +30,10 @@ query posts {
         id,
         title,
         description,
-        tags,
+          tags {
+            title,
+            path
+          }
         date,
         path,
       }
