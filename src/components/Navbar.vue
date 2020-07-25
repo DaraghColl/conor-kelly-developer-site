@@ -24,7 +24,6 @@ export default {};
   display: flex;
   justify-content: space-between;
   padding: 1em 1em;
-  margin-bottom: 2em;
 
   .navbar__pages {
     .navbar__item {
