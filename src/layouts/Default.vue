@@ -1,6 +1,9 @@
 <template>
-  <div class="layout">
-    <slot />
+  <div>
+    <Navbar />
+    <div class="layout">
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -11,6 +14,16 @@ query {
   }
 }
 </static-query>
+
+<script>
+import Navbar from '~/components/Navbar.vue';
+
+export default {
+  components: {
+    Navbar,
+  },
+};
+</script>
 
 <style>
 body {

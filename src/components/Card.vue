@@ -1,6 +1,5 @@
 <template>
   <div class="card" :class="'slide-in'">
-    <!-- <g-image class="card__img" :src="product.image" /> -->
     <h1>{{ post.title }}</h1>
     <h3 class="card__description">{{ post.description }}</h3>
     <div
@@ -39,21 +38,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~/styles/variables.scss';
+
 .card {
-  background: #fff;
+  background: $white;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: $border-medium;
   margin-bottom: 1em;
-
-  .card__img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px 5px 0 0;
-    transition: 0.7s;
-  }
 
   .card__description {
     max-width: 80%;
@@ -62,22 +55,25 @@ export default {
   .card__footer {
     display: flex;
     align-items: center;
+    @media (max-width: $screen-xs) {
+      align-items: end;
+    }
 
     .card__link {
-      background-color: #0099cc;
-      color: #fff;
-      border: 2px solid #0099cc;
-      font-weight: bold;
+      background-color: $primary;
+      color: $white;
+      border: 2px solid $primary;
+      border-radius: $border-light;
       padding: 0.4em;
-      border-radius: 3px;
+      font-weight: bold;
       text-decoration: none;
       transition: 0.4s;
 
       &:hover {
         cursor: pointer;
-        background-color: #fff;
-        color: #0099cc;
-        border: 2px solid #0099cc;
+        background-color: $white;
+        color: $primary;
+        border: 2px solid $primary;
         transition: 0.4s;
       }
     }
@@ -85,12 +81,12 @@ export default {
       display: flex;
     }
     .card__tag {
-      background-color: #f5f8fa;
-      border: 1px solid #f5f8fa;
+      background-color: $off-white;
+      border: 1px solid $off-white;
       text-decoration: none;
-      color: #000;
+      color: $black;
       padding: 0.5em;
-      border-radius: 5px;
+      border-radius: $border-medium;
       margin-right: 5px;
       min-width: 100px;
       font-weight: bold;
@@ -113,6 +109,13 @@ export default {
         width: 15px;
         transform: rotate(-110deg);
         margin-right: 0.5em;
+      }
+    }
+
+    @media (max-width: $screen-xs) {
+      flex-direction: column-reverse;
+      .card__tags-wrapper {
+        margin-top: 20px;
       }
     }
   }

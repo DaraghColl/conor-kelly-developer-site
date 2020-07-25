@@ -33,12 +33,14 @@ export default {};
 </script>
 
 <style lang="scss">
+@import '~/styles/variables.scss';
+
 .post {
   display: flex;
   justify-content: space-between;
   align-items: center;
   .post__link {
-    color: #0099cc;
+    color: $primary;
     padding: 0.4em;
     font-size: 1.2em;
     font-weight: bold;
