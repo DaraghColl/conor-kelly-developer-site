@@ -1,9 +1,13 @@
 <template>
   <Layout>
-    <h1>Blog Posts</h1>
-    <div v-for="post in $page.tag.belongsTo.edges" :key="post.node.id">
-      <h1>{{ post.node.title }}</h1>
-    </div>
+    <h1>Posts by Tag</h1>
+
+    <Card
+      v-for="post in $page.tag.belongsTo.edges"
+      :key="post.node.id"
+      :post="post.node"
+      :page="'tag'"
+    />
   </Layout>
 </template>
 
@@ -15,7 +19,7 @@ export default {
     Card,
   },
   metaInfo: {
-    title: 'Home',
+    title: 'Tag View',
   },
 };
 </script>

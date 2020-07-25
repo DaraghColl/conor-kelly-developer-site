@@ -3,8 +3,14 @@
     <!-- <g-image class="card__img" :src="product.image" /> -->
     <h1>{{ post.title }}</h1>
     <h3 class="card__description">{{ post.description }}</h3>
-    <div class="card__footer">
-      <div class="card__tags-wrapper">
+    <div
+      class="card__footer"
+      :class="{
+        'tag-view': page === 'blog',
+        'no-tag-view': page === 'tag',
+      }"
+    >
+      <div class="card__tags-wrapper" v-if="page === 'blog'">
         <g-link
           class="card__tag"
           v-for="tag in post.tags"
@@ -28,7 +34,7 @@
 import Card from '~/components/Card.vue';
 
 export default {
-  props: ['post'],
+  props: ['post', 'page'],
 };
 </script>
 
@@ -55,7 +61,7 @@ export default {
 
   .card__footer {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 
     .card__link {
       background-color: #0099cc;
@@ -109,6 +115,14 @@ export default {
         margin-right: 0.5em;
       }
     }
+  }
+
+  .tag-view {
+    justify-content: space-between;
+  }
+
+  .no-tag-view {
+    justify-content: flex-end;
   }
 }
 </style>

@@ -1,10 +1,11 @@
 <template>
   <Layout>
-    <h1>Blog Posts</h1>
+    <h1>Posts</h1>
     <Card
       v-for="post in $page.allPost.edges"
       :key="post.node.id"
       :post="post.node"
+      :page="'blog'"
     />
   </Layout>
 </template>
