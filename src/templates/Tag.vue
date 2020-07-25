@@ -34,7 +34,8 @@ export default {
             ... on Post {
               title
               description
-              date
+              date,
+              path,
             }
           }
         }
