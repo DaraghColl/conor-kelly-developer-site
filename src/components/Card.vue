@@ -1,7 +1,11 @@
 <template>
   <div class="card" :class="'slide-in'">
+    <g-image class="card__img" :src="post.thumbnail" />
     <h1>{{ post.title }}</h1>
     <h3 class="card__description">{{ post.description }}</h3>
+    <!-- <div>
+        <g-link class="card__link" :to="post.path">Read More</g-link>
+      </div> -->
     <div
       class="card__footer"
       :class="{
@@ -21,9 +25,6 @@
             {{ tag.title }}
           </div>
         </g-link>
-      </div>
-      <div>
-        <g-link class="card__link" :to="post.path">Read More</g-link>
       </div>
     </div>
   </div>
@@ -48,8 +49,31 @@ export default {
   border-radius: $border-medium;
   margin-bottom: 1em;
 
+  .card__img {
+    width: 100%;
+  }
+
   .card__description {
     max-width: 80%;
+  }
+
+  .card__link {
+    background-color: $primary;
+    color: $white;
+    border: 2px solid $primary;
+    border-radius: $border-light;
+    padding: 0.4em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $white;
+      color: $primary;
+      border: 2px solid $primary;
+      transition: 0.4s;
+    }
   }
 
   .card__footer {
@@ -57,25 +81,6 @@ export default {
     align-items: center;
     @media (max-width: $screen-xs) {
       align-items: end;
-    }
-
-    .card__link {
-      background-color: $primary;
-      color: $white;
-      border: 2px solid $primary;
-      border-radius: $border-light;
-      padding: 0.4em;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.4s;
-
-      &:hover {
-        cursor: pointer;
-        background-color: $white;
-        color: $primary;
-        border: 2px solid $primary;
-        transition: 0.4s;
-      }
     }
     .card__tags-wrapper {
       display: flex;

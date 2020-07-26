@@ -1,12 +1,15 @@
 <template>
   <Layout>
     <h1>Posts</h1>
-    <Card
-      v-for="post in $page.allPost.edges"
-      :key="post.node.id"
-      :post="post.node"
-      :page="'blog'"
-    />
+    <div class="grid">
+      <Card
+        v-for="post in $page.allPost.edges"
+        :key="post.node.id"
+        :post="post.node"
+        :page="'blog'"
+      />
+    </div>
+
     <Pager :info="$page.allPost.pageInfo" class="pagination" />
   </Layout>
 </template>
@@ -29,7 +32,7 @@ export default {
 <page-query>
 query posts($page: Int) {
 	allPost(perPage: 2, page: $page) @paginate {
-        pageInfo {
+    pageInfo {
       totalPages
       currentPage
     }
@@ -38,6 +41,7 @@ query posts($page: Int) {
         id,
         title,
         description,
+        thumbnail,  
           tags {
             title,
             path
@@ -51,6 +55,16 @@ query posts($page: Int) {
 </page-query>
 
 <style lang="scss">
+@import '~/styles/variables.scss';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  @media (max-width: $screen-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .pagination {
   display: flex;
   justify-content: flex-end;

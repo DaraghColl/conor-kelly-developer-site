@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <h1>Posts by Tag</h1>
-
     <Card
       v-for="post in $page.tag.belongsTo.edges"
       :key="post.node.id"
@@ -32,8 +31,14 @@ export default {
         edges {
           node {
             ... on Post {
-              title
-              description
+              id,
+              title,
+              description,
+              thumbnail,  
+                tags {
+                  title,
+                  path
+                }
               date,
               path,
             }
