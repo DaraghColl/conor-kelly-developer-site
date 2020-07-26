@@ -1,12 +1,14 @@
 <template>
   <Layout>
     <h1>Posts by Tag</h1>
-    <Card
-      v-for="post in $page.tag.belongsTo.edges"
-      :key="post.node.id"
-      :post="post.node"
-      :page="'tag'"
-    />
+    <div class="grid">
+      <Card
+        v-for="post in $page.tag.belongsTo.edges"
+        :key="post.node.id"
+        :post="post.node"
+        :page="'tag'"
+      />
+    </div>
   </Layout>
 </template>
 
@@ -49,4 +51,15 @@ export default {
   }
 </page-query>
 
-<style></style>
+<style lang="scss">
+@import '~/styles/variables.scss';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  @media (max-width: $screen-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+</style>

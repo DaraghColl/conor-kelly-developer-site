@@ -1,18 +1,9 @@
 <template>
   <div class="card" :class="'slide-in'">
-    <g-image class="card__img" :src="post.thumbnail" />
-    <h1>{{ post.title }}</h1>
-    <h3 class="card__description">{{ post.description }}</h3>
-    <!-- <div>
-        <g-link class="card__link" :to="post.path">Read More</g-link>
-      </div> -->
-    <div
-      class="card__footer"
-      :class="{
-        'tag-view': page === 'blog',
-        'no-tag-view': page === 'tag',
-      }"
-    >
+    <g-link :to="post.path" class="text-copy-primary">
+      <g-image class="card__img" :src="post.thumbnail" />
+      <h1>{{ post.title }}</h1>
+      <h3 class="card__description">{{ post.description }}</h3>
       <div class="card__tags-wrapper" v-if="page === 'blog'">
         <g-link
           class="card__tag"
@@ -26,7 +17,7 @@
           </div>
         </g-link>
       </div>
-    </div>
+    </g-link>
   </div>
 </template>
 
@@ -57,80 +48,54 @@ export default {
     max-width: 80%;
   }
 
-  .card__link {
-    background-color: $primary;
-    color: $white;
-    border: 2px solid $primary;
-    border-radius: $border-light;
-    padding: 0.4em;
-    font-weight: bold;
+  .card__tags-wrapper {
+    display: flex;
+  }
+  .card__tag {
+    background-color: $off-white;
+    border: 1px solid $off-white;
     text-decoration: none;
+    color: $black;
+    padding: 0.5em;
+    border-radius: $border-medium;
+    margin-right: 5px;
+    min-width: 100px;
+    font-weight: bold;
     transition: 0.4s;
 
     &:hover {
       cursor: pointer;
-      background-color: $white;
-      color: $primary;
-      border: 2px solid $primary;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
       transition: 0.4s;
     }
-  }
 
-  .card__footer {
-    display: flex;
-    align-items: center;
-    @media (max-width: $screen-xs) {
-      align-items: end;
-    }
-    .card__tags-wrapper {
+    .card__tag-flex {
       display: flex;
-    }
-    .card__tag {
-      background-color: $off-white;
-      border: 1px solid $off-white;
-      text-decoration: none;
-      color: $black;
-      padding: 0.5em;
-      border-radius: $border-medium;
-      margin-right: 5px;
-      min-width: 100px;
-      font-weight: bold;
-      transition: 0.4s;
-
-      &:hover {
-        cursor: pointer;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        transition: 0.4s;
-      }
-
-      .card__tag-flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .card__tag-icon {
-        width: 15px;
-        transform: rotate(-110deg);
-        margin-right: 0.5em;
-      }
+      justify-content: center;
+      align-items: center;
     }
 
-    @media (max-width: $screen-xs) {
-      flex-direction: column-reverse;
-      .card__tags-wrapper {
-        margin-top: 20px;
-      }
+    .card__tag-icon {
+      width: 15px;
+      transform: rotate(-110deg);
+      margin-right: 0.5em;
     }
   }
 
-  .tag-view {
-    justify-content: space-between;
+  @media (max-width: $screen-xs) {
+    flex-direction: column-reverse;
+    .card__tags-wrapper {
+      margin-top: 20px;
+    }
   }
 
-  .no-tag-view {
-    justify-content: flex-end;
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    color: inherit;
+    text-decoration: none;
   }
 }
 </style>
