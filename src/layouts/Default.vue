@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Navbar />
+  <div :class="theme">
+    <Navbar :theme="theme" v-on:setThemeEmit="setTheme" />
     <div class="layout">
       <slot />
     </div>
@@ -22,10 +22,22 @@ export default {
   components: {
     Navbar,
   },
+  data() {
+    return {
+      theme: 'theme--light',
+    };
+  },
+  methods: {
+    setTheme(theme) {
+      this.theme = theme;
+    },
+  },
 };
 </script>
 
-<style>
+<style lang="scss">
+@import '~/styles/variables.scss';
+
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;

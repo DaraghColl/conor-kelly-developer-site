@@ -1,0 +1,21 @@
+@import '~/styles/variables.scss';
+
+.theme--light {
+    background: $light-bg;
+    color: $light-text;
+    transition: 0.4s ease-in-out;
+    .card {
+        background: $white;
+        transition: 0.4s ease-in-out;
+      }
+  }
+  
+  .theme--dark {
+    background: $dark-bg;
+    color: $dark-text;
+    transition: 0.4s ease-in-out;
+    .card {
+        background: $dark-accent;
+        transition: 0.4s ease-in-out;
+      }
+  }
