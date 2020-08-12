@@ -40,13 +40,23 @@ export default {
 @import '~/styles/variables.scss';
 
 .navbar {
-  background: $primary;
+  // background: $primary;
   display: flex;
   justify-content: space-between;
-  padding: 1em 1em;
+  padding: 1em;
+
+  .navbar__logo {
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
 
   .navbar__pages {
     display: flex;
+    @media (max-width: $screen-sm) {
+      width: 100%;
+      justify-content: space-around;
+    }
     .navbar__item {
       margin-right: 1em;
     }
@@ -54,7 +64,9 @@ export default {
 
   .navbar__item {
     text-decoration: none;
-    color: $white;
+    color: inherit;
+    font-size: 1.5em;
+    font-weight: bolder;
   }
 
   .nav__theme-icon {

@@ -52,5 +52,6 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  min-height: 100vh;
 }
 </style>
