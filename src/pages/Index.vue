@@ -5,8 +5,14 @@
         <h1>Conor Kelly</h1>
         <h3>Full Stack Developer</h3>
         <div class="landing-links">
-          <g-image class="link" src="/assets/github.svg" />
-          <g-image class="link" src="/assets/linkedin.svg" />
+          <div v-if="theme === 'theme--dark'">
+            <g-image class="link" src="/assets/github.svg" />
+            <g-image class="link" src="/assets/linkedin.svg" />
+          </div>
+          <div v-if="theme === 'theme--light'">
+            <g-image class="link" src="/assets/github-dark.svg" />
+            <g-image class="link" src="/assets/linkedin-dark.svg" />
+          </div>
         </div>
       </section>
 
@@ -30,6 +36,7 @@
 
 <script>
 import Navbar from '~/components/Navbar.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   components: {
@@ -38,6 +45,7 @@ export default {
   metaInfo: {
     title: 'Home',
   },
+  computed: mapGetters(['theme']),
 };
 </script>
 
@@ -48,7 +56,7 @@ export default {
 .landing {
   display: grid;
   place-items: center;
-  font-size: 2.5vw;
+  font-size: 2em;
   padding-bottom: 2em;
   @media (max-width: $screen-sm) {
     font-size: 1.5em;
