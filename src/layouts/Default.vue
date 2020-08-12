@@ -1,6 +1,6 @@
 <template>
   <div :class="theme">
-    <Navbar :theme="theme" v-on:setThemeEmit="setTheme" />
+    <Navbar />
     <div class="layout">
       <slot />
     </div>
@@ -17,20 +17,16 @@ query {
 
 <script>
 import Navbar from '~/components/Navbar.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   components: {
     Navbar,
   },
-  data() {
-    return {
-      theme: 'theme--light',
-    };
-  },
-  methods: {
-    setTheme(theme) {
-      this.theme = theme;
-    },
+  methods: {},
+  computed: mapGetters(['theme']),
+  created() {
+    localStorage.setItem('theme', this.theme);
   },
 };
 </script>

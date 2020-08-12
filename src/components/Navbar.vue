@@ -25,14 +25,16 @@
 </template>
 
 <script>
-export default {
-  props: ['theme'],
+import { mapGetters, mapActions } from 'vuex';
 
+export default {
   methods: {
     setTheme(theme) {
-      this.$emit('setThemeEmit', theme);
+      this.toggleTheme(theme);
     },
+    ...mapActions(['toggleTheme']),
   },
+  computed: mapGetters(['theme']),
 };
 </script>
 
@@ -40,7 +42,6 @@ export default {
 @import '~/styles/variables.scss';
 
 .navbar {
-  // background: $primary;
   display: flex;
   justify-content: space-between;
   padding: 1em;
