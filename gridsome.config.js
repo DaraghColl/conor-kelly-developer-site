@@ -23,6 +23,13 @@ module.exports = {
         ],
       },
     },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Project',
+        baseDir: './content/projects',
+      },
+    },
   ],
 
   templates: {
