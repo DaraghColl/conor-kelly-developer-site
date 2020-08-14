@@ -31,7 +31,7 @@ export default {
 
 <page-query>
 query posts($page: Int) {
-	allPost(perPage: 2, page: $page) @paginate {
+	allPost(perPage: 10, page: $page) @paginate {
     pageInfo {
       totalPages
       currentPage
@@ -73,7 +73,7 @@ query posts($page: Int) {
     font-size: 1.3vw;
     margin-right: 0.5em;
     font-weight: bold;
-    color: #000;
+    color: inherit;
   }
 }
 </style>
