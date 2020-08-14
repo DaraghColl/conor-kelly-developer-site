@@ -4,6 +4,13 @@ module.exports = {
     {
       use: '@gridsome/vue-remark',
       options: {
+        typeName: 'Project',
+        baseDir: './content/projects',
+      },
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
         typeName: 'Post',
         baseDir: './content/posts',
         pathPrefix: '/blog',
@@ -21,13 +28,6 @@ module.exports = {
             { theme: 'Material-Theme-Palenight', skipInline: true },
           ],
         ],
-      },
-    },
-    {
-      use: '@gridsome/vue-remark',
-      options: {
-        typeName: 'Project',
-        baseDir: './content/projects',
       },
     },
   ],
