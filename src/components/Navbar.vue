@@ -5,9 +5,44 @@
     </div>
 
     <div class="navbar__pages">
-      <g-link class="navbar__item" to="/skills">Skills</g-link>
+      <!-- skills -->
+      <span
+        v-if="$route.path === '/'"
+        href="#"
+        class="navbar__item"
+        v-scroll-to="'#skills-section'"
+        >Skills</span
+      >
+      <g-link v-else to="/#skills-section" class="navbar__item">Skills</g-link>
+
+      <!-- projects -->
+      <span
+        v-if="$route.path === '/'"
+        href="#"
+        class="navbar__item"
+        v-scroll-to="'#project-section'"
+        >Projects</span
+      >
+      <g-link v-else to="/#project-section" class="navbar__item"
+        >Projects</g-link
+      >
+
+      <!-- contact -->
+      <span
+        v-if="$route.path === '/'"
+        href="#"
+        class="navbar__item"
+        v-scroll-to="'#contact-section'"
+        >Contact</span
+      >
+      <g-link v-else to="/#contact-section" class="navbar__item"
+        >Contact</g-link
+      >
+
+      <!-- blog -->
       <g-link class="navbar__item" to="/blog">Blog</g-link>
-      <g-link class="navbar__item" to="/contact">Contact</g-link>
+
+      <!-- theme toggle -->
       <g-image
         class="nav__theme-icon"
         src="/assets/theme--light.svg"
@@ -68,6 +103,7 @@ export default {
     color: inherit;
     font-size: 1.5em;
     font-weight: bolder;
+    cursor: pointer;
   }
 
   .nav__theme-icon {
