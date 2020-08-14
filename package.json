@@ -10,6 +10,7 @@
     "@gridsome/vue-remark": "^0.1.9",
     "gridsome": "^0.7.0",
     "gridsome-plugin-remark-shiki": "^0.3.1",
+    "vue-scrollto": "^2.18.2",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
