@@ -10,15 +10,16 @@ import VueScrollTo from 'vue-scrollto';
 import '~/styles/blog.scss';
 import '~/styles/themes.scss';
 
-export default function (Vue, { appOptions }) {
+export default function (Vue, { appOptions, head }) {
   Vue.component('Layout', DefaultLayout);
 
   Vue.use(Vuex);
   appOptions.store = store;
 
-  // Vue.use(VueScrollTo, {
-  //   offset: -130,
-  // });
-
   Vue.use(VueScrollTo);
+
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap',
+  });
 }
