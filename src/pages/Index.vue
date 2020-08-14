@@ -18,7 +18,7 @@
 
       <!-- skills -->
       <section id="skills-section" class="skills">
-        <h1 class="section-heading">Technologies</h1>
+        <h1 class="section-heading">Skills</h1>
         <div class="skills__grid">
           <g-image class="dev-icon" src="/assets/nodejs.svg" />
           <g-image class="dev-icon" src="/assets/angular.svg" />
@@ -53,6 +53,41 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section id="contact-section" class="contact">
+        <h1 class="section-heading">Contact</h1>
+        <div class="contact-wrapper">
+          <form
+            class="contact__form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input
+              class="form__item"
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+            <input
+              class="form__item"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <textarea
+              class="form__item"
+              name="message"
+              placeholder="Message"
+            ></textarea>
+            <div class="submit-form">
+              <button type="submit">Send</button>
+            </div>
+          </form>
         </div>
       </section>
     </div>
@@ -97,8 +132,11 @@ query project {
 .landing {
   display: grid;
   place-items: center;
-  font-size: 2em;
+  font-size: 3em;
   padding-bottom: 2em;
+  @media (max-width: $screen-xl) {
+    font-size: 2em;
+  }
   @media (max-width: $screen-sm) {
     font-size: 1.5em;
   }
@@ -127,8 +165,11 @@ query project {
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
     .dev-icon {
-      max-width: 100px;
+      max-width: 150px;
       margin-bottom: 2em;
+      @media (max-width: $screen-xl) {
+        max-width: 100px;
+      }
       @media (max-width: $screen-sm) {
         max-width: 50px;
       }
@@ -166,6 +207,52 @@ query project {
       padding: 2px 20px;
       border-radius: 2px;
       margin-right: 5px;
+    }
+  }
+}
+
+/** contact **/
+.contact-wrapper {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h3 {
+      text-align: center;
+    }
+
+    .form__item {
+      margin-bottom: 1em;
+      background-color: #f5f6f8;
+      border: 1px solid #f5f6f8;
+      padding: 10px;
+      border-radius: 5px;
+      &:focus {
+        border: 2px solid #0099cc;
+        outline: none;
+      }
+    }
+
+    .submit-form {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        background: #fff;
+        color: #0099cc;
+        border: 1px solid #0099cc;
+        padding: 0.7em 1em;
+        width: 100px;
+        border-radius: 3px;
+
+        &:hover {
+          cursor: pointer;
+          background: #0099cc;
+          color: #fff;
+        }
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div :class="theme">
+  <div class="main-div" :class="theme">
     <Navbar />
     <div class="layout">
       <slot />
@@ -26,7 +26,7 @@ export default {
   methods: {},
   computed: mapGetters(['theme']),
   created() {
-    localStorage.setItem('theme', this.theme);
+    // localStorage.setItem('theme', this.theme);
   },
 };
 </script>
@@ -48,6 +48,12 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  @media (min-width: $screen-xl) {
+    max-width: 1200px;
+  }
+}
+
+.main-div {
   min-height: 100vh;
 }
 </style>

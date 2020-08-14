@@ -1,5 +1,6 @@
 const state = {
-  theme: localStorage.theme ? localStorage.theme : 'theme--dark',
+  // theme: localStorage.theme ? localStorage.theme : 'theme--dark',
+  theme: 'theme--dark',
 };
 
 const getters = {
@@ -9,7 +10,7 @@ const getters = {
 const actions = {
   toggleTheme({ commit }, theme) {
     commit('setThemeState', theme);
-    localStorage.setItem('theme', theme);
+    // localStorage.setItem('theme', theme);
   },
 };
 
