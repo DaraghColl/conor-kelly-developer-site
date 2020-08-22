@@ -49,10 +49,10 @@ export default {};
     .form__item {
       margin-bottom: 1em;
       background: inherit;
+      color: inherit;
       border: none;
       border-bottom: 1px solid #ccc;
       padding: 10px;
-      // border-radius: 5px;
       &:focus {
         border-bottom: 1px solid $primary;
         transition: 0.8s;
