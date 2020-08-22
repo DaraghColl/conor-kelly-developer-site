@@ -24,8 +24,6 @@
 </template>
 
 <script>
-import Card from '~/components/Card.vue';
-
 export default {
   props: ['post', 'page'],
 };
