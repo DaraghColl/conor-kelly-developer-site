@@ -64,18 +64,13 @@ export default {};
       display: flex;
       justify-content: flex-end;
       button {
-        background: #fff;
-        color: $primary;
+        background: $primary;
+        color: $white;
         border: 1px solid $primary;
         padding: 0.7em 1em;
         width: 100px;
         border-radius: 3px;
-
-        &:hover {
-          cursor: pointer;
-          background: $primary;
-          color: #fff;
-        }
+        cursor: pointer;
       }
     }
   }
