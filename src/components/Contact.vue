@@ -2,12 +2,13 @@
   <section id="contact-section" class="contact">
     <h1 class="section-heading">Contact</h1>
     <div class="contact-wrapper">
-      <form
+      <!-- <form
         class="contact__form"
         name="contact"
         method="POST"
         data-netlify="true"
-      >
+      > -->
+      <form class="contact__form" name="contact">
         <input type="hidden" name="form-name" value="contact" />
         <input class="form__item" type="text" name="name" placeholder="Name" />
         <input
