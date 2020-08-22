@@ -83,12 +83,12 @@ query project {
   display: grid;
   place-items: center;
   font-size: 3em;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   @media (max-width: $screen-xl) {
     font-size: 2em;
   }
   @media (max-width: $screen-sm) {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
   h1 {
     margin-bottom: 0;
@@ -101,7 +101,7 @@ query project {
   .landing-links {
     display: flex;
     .link {
-      width: 8vw;
+      width: 10vw;
       max-width: 40px;
       margin: 0 10px;
     }

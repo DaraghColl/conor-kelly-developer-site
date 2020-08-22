@@ -1,6 +1,6 @@
 <template>
   <div class="card" :class="'slide-in'">
-    <g-link :to="post.path" class="text-copy-primary">
+    <g-link :to="post.path">
       <g-image class="card__img" :src="post.thumbnail" />
       <div class="card__body">
         <h1>{{ post.title }}</h1>
@@ -33,6 +33,7 @@ export default {
 @import '~/styles/variables.scss';
 
 .card {
+  -webkit-tap-highlight-color: transparent;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: $border-medium;

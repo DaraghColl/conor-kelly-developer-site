@@ -46,7 +46,7 @@ export default {
     justify-content: flex-end;
     a {
       text-decoration: none;
-      background: #aa66cc;
+      background: $primary;
       color: #fff;
       padding: 2px 20px;
       border-radius: 2px;

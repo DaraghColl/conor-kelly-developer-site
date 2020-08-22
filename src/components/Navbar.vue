@@ -104,6 +104,9 @@ export default {
     font-size: 1.5em;
     font-weight: bolder;
     cursor: pointer;
+    @media (max-width: $screen-sm) {
+      font-size: 1em;
+    }
   }
 
   .nav__theme-icon {

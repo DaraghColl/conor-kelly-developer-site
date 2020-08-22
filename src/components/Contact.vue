@@ -37,6 +37,7 @@ export default {};
 @import '~/styles/variables.scss';
 
 .contact-wrapper {
+  padding-bottom: 5vh;
   .contact__form {
     display: flex;
     flex-direction: column;
@@ -53,7 +54,7 @@ export default {};
       padding: 10px;
       // border-radius: 5px;
       &:focus {
-        border-bottom: 1px solid #0099cc;
+        border-bottom: 1px solid $primary;
         transition: 0.8s;
         outline: none;
       }
@@ -64,15 +65,15 @@ export default {};
       justify-content: flex-end;
       button {
         background: #fff;
-        color: #0099cc;
-        border: 1px solid #0099cc;
+        color: $primary;
+        border: 1px solid $primary;
         padding: 0.7em 1em;
         width: 100px;
         border-radius: 3px;
 
         &:hover {
           cursor: pointer;
-          background: #0099cc;
+          background: $primary;
           color: #fff;
         }
       }
