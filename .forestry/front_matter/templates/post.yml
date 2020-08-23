@@ -40,3 +40,5 @@ fields:
     date_format: DD/MM/YYYY
     display_utc: false
     export_format: DD-MM-YYYY
+pages:
+- content/posts/cms-test.md
