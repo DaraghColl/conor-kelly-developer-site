@@ -3,8 +3,10 @@
     <g-link :to="post.path">
       <g-image class="card__img" :src="post.thumbnail" />
       <div class="card__body">
-        <h1>{{ post.title }}</h1>
-        <h3 class="card__description">{{ post.description }}</h3>
+        <div>
+          <h1>{{ post.title }}</h1>
+          <h3 class="card__description">{{ post.description }}</h3>
+        </div>
         <div class="card__tags-wrapper" v-if="page === 'blog'">
           <g-link
             class="card__tag"
@@ -41,6 +43,8 @@ export default {
 
   .card__img {
     width: 100%;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 5px 5px 0 0;
   }
 
@@ -49,6 +53,8 @@ export default {
 
     .card__description {
       max-width: 80%;
+      height: 60px;
+      overflow: elipsis;
     }
 
     .card__tags-wrapper {

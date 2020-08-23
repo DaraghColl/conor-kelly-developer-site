@@ -2,7 +2,7 @@
 title: First Blog Post
 description: Angular - Behhavior Subject and Observables
 thumbnail: '/uploads/test-thumbnail.webp'
-date: 01-01-2020
+date: 2020-09-09
 tags: ['angular', 'mongodb']
 ---
 
