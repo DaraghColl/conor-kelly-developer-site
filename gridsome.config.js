@@ -1,5 +1,6 @@
 module.exports = {
-  siteName: 'Kelly',
+  siteName: 'Conor Kelly',
+  siteDescription: 'Conor Kelly Full Stack Developer',
   plugins: [
     {
       use: '@gridsome/vue-remark',

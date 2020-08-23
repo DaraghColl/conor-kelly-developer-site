@@ -1,6 +1,10 @@
 <template>
   <div class="project__card">
-    <g-image class="project__img" :src="project.thumbnail" />
+    <g-image
+      class="project__img"
+      :src="project.thumbnail"
+      alt="project image"
+    />
 
     <div class="project__body">
       <h1>{{ project.title }}</h1>
