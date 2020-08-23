@@ -20,7 +20,7 @@ export default {
     Card,
   },
   metaInfo: {
-    title: 'Tag View',
+    title: 'Post By Tag',
   },
 };
 </script>

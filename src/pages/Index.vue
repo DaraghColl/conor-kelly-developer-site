@@ -65,7 +65,7 @@ export default {
     Project,
   },
   metaInfo: {
-    title: 'Home',
+    title: 'Conor Kelly Full Stack Developer',
   },
   computed: mapGetters(['theme']),
 };

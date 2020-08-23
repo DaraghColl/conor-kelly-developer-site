@@ -24,7 +24,7 @@ export default {
     Pager,
   },
   metaInfo: {
-    title: 'Home',
+    title: 'Conor Kelly Blog',
   },
 };
 </script>

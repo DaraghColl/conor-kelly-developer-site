@@ -42,7 +42,13 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-export default {};
+export default {
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
