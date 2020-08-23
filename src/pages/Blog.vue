@@ -31,7 +31,7 @@ export default {
 
 <page-query>
 query posts($page: Int) {
-	allPost(perPage: 10, page: $page) @paginate {
+	allPost(perPage: 10, page: $page, sortBy: "date", order: DESC) @paginate {
     pageInfo {
       totalPages
       currentPage
@@ -46,7 +46,7 @@ query posts($page: Int) {
             title,
             path
           }
-        date,
+        date(format: "YYYY-MM-DD"),
         path,
       }
     }

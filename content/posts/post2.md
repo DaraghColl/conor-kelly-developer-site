@@ -2,7 +2,7 @@
 title: Second Blog Post
 description: Second Blog Post - Gridsome Forestry
 thumbnail: /uploads/test-thumbnail.webp
-date: 2019-05-12
+date: 2020-01-29
 tags: ['vuejs', 'frontend']
 ---
 
