@@ -1,7 +1,7 @@
 <template>
   <div class="card" :class="'slide-in'">
     <g-link :to="post.path">
-      <g-image class="card__img" :src="post.thumbnail" />
+      <g-image class="card__img" :src="post.thumbnail" alt="post image" />
       <div class="card__body">
         <div>
           <h1>{{ post.title }}</h1>
@@ -15,7 +15,11 @@
             :to="tag.path"
           >
             <div class="card__tag-flex">
-              <g-image class="card__tag-icon" src="/assets/tag.svg" />
+              <g-image
+                class="card__tag-icon"
+                src="/assets/tag.svg"
+                alt="tag icon"
+              />
               {{ tag.title }}
             </div>
           </g-link>

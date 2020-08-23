@@ -1,21 +1,44 @@
 <template>
   <section id="skills-section" class="skills">
     <h1 class="section-heading">Skills</h1>
+
     <div class="skills__grid">
-      <g-image class="dev-icon" src="/assets/nodejs.svg" />
-      <g-image class="dev-icon" src="/assets/angular.svg" />
-      <g-image class="dev-icon" src="/assets/python.svg" />
-      <g-image class="dev-icon" src="/assets/java.svg" />
-      <g-image class="dev-icon" src="/assets/python.svg" />
-      <g-image class="dev-icon" src="/assets/nodejs.svg" />
-      <g-image class="dev-icon" src="/assets/java.svg" />
-      <g-image class="dev-icon" src="/assets/angular.svg" />
+      <g-image
+        v-for="skill in skills"
+        :key="skill.alt"
+        class="dev-icon"
+        :src="skill.icon"
+        :alt="skill.alt"
+      />
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      skills: [
+        {
+          icon: '/assets/nodejs.svg',
+          alt: 'nodejs',
+        },
+        {
+          icon: '/assets/angular.svg',
+          alt: 'angular',
+        },
+        {
+          icon: '/assets/python.svg',
+          alt: 'python',
+        },
+        {
+          icon: '/assets/java.svg',
+          alt: 'java',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss">

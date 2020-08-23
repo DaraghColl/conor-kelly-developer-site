@@ -46,12 +46,14 @@
       <g-image
         class="nav__theme-icon"
         src="/assets/theme--light.svg"
+        alt="theme icon light"
         v-on:click="setTheme('theme--light')"
         v-if="theme === 'theme--dark'"
       />
       <g-image
         class="nav__theme-icon"
         src="/assets/theme--dark.svg"
+        alt="theme icon dark"
         v-on:click="setTheme('theme--dark')"
         v-if="theme === 'theme--light'"
       />
