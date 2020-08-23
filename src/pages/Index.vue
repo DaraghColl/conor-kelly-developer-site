@@ -6,12 +6,24 @@
         <h5>Full Stack Developer</h5>
         <div class="landing-links">
           <div v-if="theme === 'theme--dark'">
-            <g-image class="link" src="/assets/github.svg" />
-            <g-image class="link" src="/assets/linkedin.svg" />
+            <g-image class="link" src="/assets/github.svg" alt="github link" />
+            <g-image
+              class="link"
+              src="/assets/linkedin.svg"
+              alt="linkedin link"
+            />
           </div>
           <div v-if="theme === 'theme--light'">
-            <g-image class="link" src="/assets/github-dark.svg" />
-            <g-image class="link" src="/assets/linkedin-dark.svg" />
+            <g-image
+              class="link"
+              src="/assets/github-dark.svg"
+              alt="github link"
+            />
+            <g-image
+              class="link"
+              src="/assets/linkedin-dark.svg"
+              alt="linkedin link"
+            />
           </div>
         </div>
       </section>
