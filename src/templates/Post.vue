@@ -8,12 +8,17 @@
             <g-image
               class="post__link-icon"
               src="/assets/arrow-left-blue.svg"
+              alt="all posts"
             />All Posts
           </g-link>
         </div>
       </div>
       <div class="post__img-and-decription">
-        <g-image class="post__img" :src="$page.post.thumbnail" />
+        <g-image
+          class="post__img"
+          :src="$page.post.thumbnail"
+          alt="post image"
+        />
         <h4 class="post__description">{{ $page.post.description }}</h4>
       </div>
     </div>
