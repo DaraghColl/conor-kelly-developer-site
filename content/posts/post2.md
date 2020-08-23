@@ -2,8 +2,9 @@
 title: Second Blog Post
 description: Second Blog Post - Gridsome Forestry
 thumbnail: /uploads/test-thumbnail.webp
-date: 2020-01-29
-tags: ['vuejs', 'frontend']
+date: 03-01-2020
+
+tags: ['node', 'testing']
 ---
 
 # An h1 header

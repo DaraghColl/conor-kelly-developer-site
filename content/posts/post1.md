@@ -2,8 +2,8 @@
 title: First Blog Post
 description: Angular - Behhavior Subject and Observables
 thumbnail: '/uploads/test-thumbnail.webp'
-date: 2020-01-01
-tags: ['angular', 'frontend']
+date: 01-01-2020
+tags: ['angular', 'mongodb']
 ---
 
 # An h1 header

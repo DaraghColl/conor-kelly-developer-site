@@ -1,0 +1,44 @@
+---
+label: Post
+hide_body: false
+fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+    description: post title
+  - name: description
+    type: text
+    config:
+      required: true
+    label: Description
+    description: post description
+  - name: thumbnail
+    type: file
+    config:
+      maxSize: 64
+      required: true
+    label: thumbnail
+  - name: tags
+    type: tag_list
+    config:
+      required: true
+    label: Tags
+    description: post tags
+    default:
+      - angular
+      - node
+      - testing
+      - mongodb
+  - name: date
+    type: datetime
+    label: Date
+    description: post date
+    hidden: false
+    config:
+      required: true
+    config:
+      date_format: DD/MM/YYYY
+      display_utc: false
+      export_format: DD-MM-YYYY

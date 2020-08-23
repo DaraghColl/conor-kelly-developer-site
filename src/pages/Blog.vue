@@ -46,7 +46,7 @@ query posts($page: Int) {
             title,
             path
           }
-        date(format: "YYYY-MM-DD"),
+        date(format: "DD-MM-YYYY"),
         path,
       }
     }
