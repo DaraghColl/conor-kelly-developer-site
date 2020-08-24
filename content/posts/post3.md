@@ -1,7 +1,7 @@
 ---
 title: Third Blog Post
 description: Node Js Formatting with Prettier and Husky
-thumbnail: /uploads/test-thumbnail.webp
+thumbnail: '/uploads/prettier-husky.jpg'
 date: 2020-01-20
 tags: ['node', 'testing']
 ---

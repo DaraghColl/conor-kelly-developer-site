@@ -4,7 +4,7 @@
       <g-image class="card__img" :src="post.thumbnail" alt="post image" />
       <div class="card__body">
         <div>
-          <h1>{{ post.title }}</h1>
+          <h1 class="card__title">{{ post.title }}</h1>
           <h3 class="card__description">{{ post.description }}</h3>
         </div>
         <div class="card__tags-wrapper" v-if="page === 'blog'">
@@ -47,18 +47,21 @@ export default {
 
   .card__img {
     width: 100%;
-    max-height: 200px;
-    object-fit: cover;
     border-radius: 5px 5px 0 0;
   }
 
   .card__body {
-    padding: 20px;
+    padding: 1.3em;
+
+    .card__title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
     .card__description {
       max-width: 80%;
       height: 60px;
-      overflow: elipsis;
+      margin-top: 0.2em;
     }
 
     .card__tags-wrapper {

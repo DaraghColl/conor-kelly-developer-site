@@ -1,7 +1,7 @@
 ---
 title: Second Blog Post
 description: Second Blog Post - Gridsome Forestry
-thumbnail: /uploads/test-thumbnail.webp
+thumbnail: '/uploads/testing-chai.jpg'
 date: 2020-01-03
 tags: ['node', 'testing']
 ---
