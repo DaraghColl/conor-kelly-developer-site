@@ -7,6 +7,7 @@ module.exports = {
       options: {
         typeName: 'Project',
         baseDir: './content/projects',
+        resolveAbsolutePaths: true,
       },
     },
     {
@@ -15,6 +16,8 @@ module.exports = {
         typeName: 'Post',
         baseDir: './content/posts',
         pathPrefix: '/blog',
+        resolveAbsolutePaths: true,
+
         template: './src/templates/Post.vue',
         refs: {
           // Example 2: Create a Tag collection by reference `tags` field.
@@ -26,7 +29,10 @@ module.exports = {
         plugins: [
           [
             'gridsome-plugin-remark-shiki',
-            { theme: 'Material-Theme-Palenight', skipInline: true },
+            {
+              theme: 'Material-Theme-Palenight',
+              skipInline: true,
+            },
           ],
         ],
       },
